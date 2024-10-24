@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+/*
+* Início das regras customizadas
+*/
+
+
+/* Classe: Container
+*  Objetivo: Centraliza os objetos
+*  Aqui o flex box pega tudo e centraliza no meio
+*/
+
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+
+/**
+** Class: .container-content
+** Objetivo: Ajustar no centro todo os 'conteúdos' de cada componente
+*/
+
+.container-content {
+    width: 100%;
+    max-width: 748px;
+}

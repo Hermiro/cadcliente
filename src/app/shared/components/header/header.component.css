@@ -1,0 +1,15 @@
+/*
+** Arquivo com estilos próprios para o header
+**
+*/
+
+
+/*
+** Classe: title
+** Objetivo: Centralizar o texto no meio do elemento
+**
+*/
+
+.title {
+    text-align: center;
+}

@@ -1,0 +1,37 @@
+<form [formGroup]="meuFormulario" (ngSubmit)="OnSubmit()" class="form-container">
+    <div class="form-content-container">
+        <mat-form-field appearance="fill">
+            <mat-label>Nome Cliente</mat-label>
+            <input matInput formControlName="nomecliente" placeholder="Insira seu nome">
+            <!--<mat-error *ngIf="meuFormulario.get('nomecliente')?.invalid && meuFormulario.get('nomecliente')?.touched">
+        Nome do Cliente é obrigatório.
+    </mat-error>-->
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Cód. Cliente</mat-label>
+            <input matInput formControlName="codcliente" placeholder="Insira código">
+            <!--<mat-error *ngIf="meuFormulario.get('codcliente')?.invalid && meuFormulario.get('codcliente')?.touched">
+        Cód. do Cliente é obrigatório.
+    </mat-error>-->
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Tipo Cliente</mat-label>
+            <input matInput formControlName="tipocliente_id" placeholder="Insira tipo">
+            <!--<mat-error *ngIf="meuFormulario.get('codcliente')?.invalid && meuFormulario.get('codcliente')?.touched">
+      Cód. do Cliente é obrigatório.
+  </mat-error>-->
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Status Cliente</mat-label>
+            <input matInput formControlName="statuscliente_id" placeholder="Insira código">
+            <!--<mat-error *ngIf="meuFormulario.get('codcliente')?.invalid && meuFormulario.get('codcliente')?.touched">
+    Cód. do Cliente é obrigatório.
+</mat-error>-->
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit">Enviar</button>
+    </div>
+</form>

@@ -1,0 +1,66 @@
+<div class="action-container">
+    <a mat-raised-button [routerLink]="[ '/create_client' ]" color="accent">Criar Cliente</a>
+</div>
+<!--
+<div class="container-content">
+    @for (item of clients; track item.ClientDetails.id) {
+    <app-card [client]="item"></app-card>
+    }
+</div>
+-->
+<div class="container-content">
+    <table mat-table [dataSource]="clients()" class="mat-elevation-z8">
+
+        <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="codcliente">
+            <th mat-header-cell *matHeaderCellDef> Código </th>
+            <td mat-cell *matCellDef="let clients"> {{ clients.codcliente }} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="nomecliente">
+            <th mat-header-cell *matHeaderCellDef> Nome Cliente </th>
+            <td mat-cell *matCellDef="let clients "> {{clients.nomecliente}} </td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="tipocliente_id">
+            <th mat-header-cell *matHeaderCellDef> Tipo Cliente </th>
+            <td mat-cell *matCellDef="let clients "> {{clients.tipocliente_id}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="statuscliente_id">
+            <th mat-header-cell *matHeaderCellDef> Status </th>
+            <td mat-cell *matCellDef="let clients "> {{clients.statuscliente_id}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="created">
+            <th mat-header-cell *matHeaderCellDef> Criado em: </th>
+            <td mat-cell *matCellDef="let clients "> {{clients.created}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="modified">
+            <th mat-header-cell *matHeaderCellDef> Alterado em: </th>
+            <td mat-cell *matCellDef="let clients "> {{clients.modified}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef> Ações </th>
+            <td mat-cell *matCellDef="let clients ">
+                <button mat-button (click)="OnEdit(clients)">Editar</button><br/>
+
+                <button mat-button (click)="OnDelete(clients)">Remover</button>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns "></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns; "></tr>
+    </table>
+</div>
